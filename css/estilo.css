@@ -1,0 +1,74 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Roboto Mono', monospace;
+}
+body{
+    background-image: url("../img/fondo.jpg")
+}
+
+.principal{
+    max-width: 1200px;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cronometro{
+    color: white;
+    font-size: 5.2em;
+    width: 70%;
+}
+#contenedor{
+    justify-content: space-evenly;
+}
+.articulo_ejercicio{
+    background: rgb(209, 209, 209);
+    min-width: 230px;
+    margin:10px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px rgb(175, 175, 175);
+
+}
+
+.articulo_ejercicio li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    border-bottom: 1px dashed black;
+    font-size: 1.2em;
+    padding: 2px;
+}
+
+button {
+    background-color: rgb(68, 68, 68);
+    padding: 5px;
+    color: white;
+    font-weight: 700;
+    border: 2px solid rgb(156, 156, 156);
+    margin: 5px;
+}
+
+.menu_botones{
+    text-align: center;
+}
+
+button:hover{
+    background: rgb(112, 111, 111);
+}
+
+.temporizador{
+    background: rgb(248, 234, 102);
+    min-width: 150px;
+    padding: 5px;
+    margin:20px;
+    text-align: center;
+    box-shadow: 3px 3px 10px rgb(248, 234, 102);
+    font-weight: 700;
+    color: rgb(88, 14, 14);
+    transform: rotate(10deg)
+}
+#temporizador{
+    font-size: 6.0em;
+}
