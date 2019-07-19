@@ -42,29 +42,33 @@ window.onload = () =>{
     }
     let activoTemporizador = false;
     let hayEjercicio = false;
+    let activoCronometro = false;
     document.getElementById("iniciarCronometro").addEventListener("click", () => {
-        x = setInterval(()=> {
-            reloj.segundo ++;
-            if(reloj.segundo == 60){
-                reloj.segundo = 0;
-                reloj.minuto ++;
-                if(reloj.minuto == 60){
-                    reloj.minuto = 0;
-                    reloj.hora ++;
-                    if(reloj.hora == 24){
-                        reloj.hora = 0;
+        if(activoCronometro == false){
+            x = setInterval(()=> {
+                reloj.segundo ++;
+                if(reloj.segundo == 60){
+                    reloj.segundo = 0;
+                    reloj.minuto ++;
+                    if(reloj.minuto == 60){
+                        reloj.minuto = 0;
+                        reloj.hora ++;
+                        if(reloj.hora == 24){
+                            reloj.hora = 0;
+                        }
                     }
                 }
-            }
-
-            modificarCronometroHTML(reloj);
-        } , 1000);
-
-        return x;
+    
+                modificarCronometroHTML(reloj);
+            } , 1000);
+            activoCronometro = true;
+            return x;
+        }
     })
     document.getElementById("pararCronometro").addEventListener("click", () => {
         clearInterval(x);
         finalizarTemporizador(z);
+        activoCronometro = false;
     })
     document.getElementById("nuevoEjercicio").addEventListener("click", () => {
         if(activoTemporizador == false){
@@ -93,6 +97,7 @@ window.onload = () =>{
         reloj.segundo = 0;
         reloj.hora = 0;
         modificarCronometroHTML(reloj);
+        activoCronometro = false;
     })
     document.getElementById("finEjercicio").addEventListener("click", () =>{
         if(hayEjercicio === true && activoTemporizador == false){
