@@ -14,12 +14,12 @@ body {
   flex-wrap: wrap;
   justify-content: center;
 }
-.cronometro {
+.cronometer {
   color: white;
   font-size: 5.2em;
   width: 70%;
 }
-#contenedor {
+#container {
   justify-content: space-evenly;
 }
 .articulo_ejercicio {
@@ -41,9 +41,7 @@ body {
 }
 
 button {
-  background-color: rgb(68, 68, 68);
   padding: 5px;
-  color: white;
   font-weight: 700;
   border: 2px solid rgb(156, 156, 156);
   margin: 5px;
